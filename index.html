@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferretería</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100">
+    <header class="header">
+        <div class="logo ml-4">
+            <img src="tu_logo.jpg.jpg" alt="Logo de la Ferretería" class="logo-img">
+        </div>
+        <nav class="nav mr-4">
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#pedidos">Pedidos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h1 class="hero-title">Bienvenido a Nuestra Ferretería</h1>
+        <p class="hero-description">La mejor calidad en herramientas y materiales para tus proyectos.</p>
+        <button onclick="window.location.href='#productos'" class="hero-button">Ver Productos</button>
+    </section>
+
+    <section id="productos" class="products">
+        <h2 class="products-title">Nuestros Productos</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <h3 class="product-card-title">Herramientas Manuales</h3>
+                <p class="product-card-description">Martillos, destornilladores, llaves, etc.</p>
+                <button onclick="alert('Producto añadido al carrito')" class="product-card-button">Añadir al Carrito</button>
+            </div>
+            <div class="product-card">
+                <h3 class="product-card-title">Herramientas Eléctricas</h3>
+                <p class="product-card-description">Taladros, sierras, lijadoras, etc.</p>
+                <button onclick="alert('Producto añadido al carrito')" class="product-card-button">Añadir al Carrito</button>
+            </div>
+            <div class="product-card">
+                <h3 class="product-card-title">Materiales de Construcción</h3>
+                <p class="product-card-description">Cemento, arena, ladrillos, etc.</p>
+                <button onclick="alert('Producto añadido al carrito')" class="product-card-button">Añadir al Carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="services">
+        <h2 class="services-title">Nuestros Servicios</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3 class="service-card-title">Asesoramiento Técnico</h3>
+                <p class="service-card-description">Asesoramiento personalizado para tus proyectos.</p>
+            </div>
+            <div class="service-card">
+                <h3 class="service-card-title">Instalaciones</h3>
+                <p class="service-card-description">Servicio de instalación de nuestros productos.</p>
+            </div>
+            <div class="service-card">
+                <h3 class="service-card-title">Envío a Domicilio</h3>
+                <p class="service-card-description">Entrega de tus compras en la puerta de tu casa.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <h2 class="contact-title">Contáctanos</h2>
+        <p class="contact-description">Visítanos en nuestra tienda o llámanos.</p>
+        <p class="contact-info">Teléfono: +123 456 7890</p>
+        <p class="contact-info">Email: info@ferreteria.com</p>
+    </section>
+
+    <section id="pedidos" class="pedidos">
+        <h2 class="pedidos-title">Solicita un Producto</h2>
+        <p class="pedidos-description">¿No encuentras lo que buscas? ¡Haz tu pedido aquí!</p>
+        <form class="pedidos-form">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="producto">Producto:</label>
+                <input type="text" id="producto" name="producto" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="pedidos-button">Enviar Pedido</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 Ferretería. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
