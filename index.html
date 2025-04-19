@@ -2,168 +2,129 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferretería</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="bootstrap.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Ferretería El Clavo Fijo</title>
+    <link rel="stylesheet" href="styles/page.css">
+    <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/table.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/ferreteria.css">
+    <link rel="stylesheet" href="styles/responsive.css">
 </head>
-<body class="bg-body-secondary">
-    <header class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand ms-lg-0" href="#">
-                <img src="archivo.png.jpg" alt="Logo de la Ferretería" class="logo-img d-inline-block align-middle">
-                <span class="ms-2">Ferretería</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#productos">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#servicios">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#pedidos">Pedidos</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>
+<body>
+    <div class="landing-container">
+        <nav class="landing-nav"></nav>
+        <header class="landing-header">
+            <img src="img/logo_ferreteria.jpg" alt="Logo de Ferretería El Clavo Fijo" class="logo">
+            <nav class="landing-nav">
+                <a href="#productos">Productos</a>
+                <a href="#nueva-solicitud">Solicitar Presupuesto</a>
+                <a href="#gestion-solicitudes">Gestionar Solicitud</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </header>
 
-    <main>
-        <section id="inicio" class="py-5 bg-primary text-white text-center">
-            <div class="container">
-                <h1 class="display-4">Bienvenido a Nuestra Ferretería</h1>
-                <p class="lead">La mejor calidad en herramientas y materiales para tus proyectos.</p>
-                <button onclick="window.location.href='#productos'" class="btn btn-light btn-lg">Ver Productos</button>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>Tu Ferretería de Confianza</h1>
+                <p>Encuentra todo lo que necesitas para tus proyectos, desde herramientas hasta materiales de construcción.</p>
+                <a href="#nueva-solicitud" class="button primary">Solicitar Presupuesto</a>
+            </div>
+            <div class="separator"></div> <div class="hero-image">
+            <div class="hero-image">
+                <img src="img/ferreteria.png" alt="Herramientas en una ferretería" class="full-width">
             </div>
         </section>
 
-        <section id="productos" class="py-5 bg-light">
-            <div class="container">
-                <h2 class="h3 mb-4">Nuestros Productos</h2>
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Herramientas Manuales</h5>
-                                <p class="card-text">Martillos, destornilladores, llaves, etc.</p>
-                                <button onclick="alert('Producto añadido al carrito')" class="btn btn-outline-primary btn-sm">Añadir al Carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Herramientas Eléctricas</h5>
-                                <p class="card-text">Taladros, sierras, lijadoras, etc.</p>
-                                <button onclick="alert('Producto añadido al carrito')" class="btn btn-outline-primary btn-sm">Añadir al Carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Materiales de Construcción</h5>
-                                <p class="card-text">Cemento, arena, ladrillos, etc.</p>
-                                <button onclick="alert('Producto añadido al carrito')" class="btn btn-outline-primary btn-sm">Añadir al Carrito</button>
-                            </div>
-                        </div>
-                    </div>
+        <section id="productos" class="services-section">
+            <h2>Nuestros Productos Destacados</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Herramientas Eléctricas</h3>
+                    <p>Taladros, sierras, amoladoras y más.</p>
+                    <ul class="service-list">
+                        <li>Taladros Percutores</li>
+                        <li>Sierras Circulares</li>
+                        <li>Amoladoras Angulares</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Herramientas Manuales</h3>
+                    <p>Martillos, destornilladores, alicates.</p>
+                    <ul class="service-list">
+                        <li>Juegos de Destornilladores</li>
+                        <li>Martillos de Carpintero</li>
+                        <li>Alicates de Corte</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Materiales de Construcción</h3>
+                    <p>Cemento, ladrillos, arena.</p>
+                    <ul class="service-list">
+                        <li>Bolsas de Cemento</li>
+                        <li>Ladrillos Comunes</li>
+                        <li>Arena Fina</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Pinturas y Adhesivos</h3>
+                    <p>Pinturas de interior, exterior, pegamentos.</p>
+                    <ul class="service-list">
+                        <li>Pintura Látex Interior</li>
+                        <li>Adhesivo de Contacto</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section id="servicios" class="py-5 bg-body-tertiary">
-            <div class="container">
-                <h2 class="h3 mb-4">Nuestros Servicios</h2>
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Asesoramiento Técnico</h5>
-                                <p class="card-text">Asesoramiento personalizado para tus proyectos.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Instalaciones</h5>
-                                <p class="card-text">Servicio de instalación de nuestros productos.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Envío a Domicilio</h5>
-                                <p class="card-text">Entrega de tus compras en la puerta de tu casa.</p>
-                            </div>
-                        </div>
-                    </div>
+        <section id="nueva-solicitud" class="new-reservation-section">
+            <h2>Solicitar Presupuesto o Pedido</h2>
+            <form id="nuevaSolicitudForm" class="reservation-form">
+                <div class="form-group">
+                    <label for="nombreSolicitud">Nombre:</label>
+                    <input type="text" id="nombreSolicitud" name="nombre" required>
                 </div>
+                <div class="form-group">
+                    <label for="apellidoSolicitud">Apellido:</label>
+                    <input type="text" id="apellidoSolicitud" name="apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="emailSolicitud">Email:</label>
+                    <input type="email" id="emailSolicitud" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcionSolicitud">Descripción de la Solicitud:</label>
+                    <textarea id="descripcionSolicitud" name="descripcion" rows="5" required placeholder="Indica los productos, cantidades o servicios que necesitas."></textarea>
+                </div>
+                <a href="https://wa.me/5493513478652?text=Hola,%20me%20gustaría%20realizar%20una%20consulta/pedido." class="button primary" target="_blank" rel="noopener noreferrer">Enviar por WhatsApp</a>
+                <div id="mensaje-solicitud-enviada" style="display:none; margin-top: 15px; color: green;">
+                    ¡Su solicitud ha sido enviada! Nos pondremos en contacto pronto.
+                </div>
+               
+            </form>
+        </section>
+<!-- 
+        <section id="gestion-solicitudes" class="reservation-management-section">
+            <h2>Gestionar Mi Solicitud (Información)</h2>
+            <p>Como esta página no cuenta con gestión automática de solicitudes, cualquier modificación o cancelación deberá realizarse respondiendo al correo electrónico que le enviaremos con los detalles de su solicitud, o bien contactándonos directamente por teléfono.</p>
+            </section> -->
+
+        <section id="contacto" class="contact-section">
+            <h2>Contacto</h2>
+            <div class="contact-info">
+                <p><i class="icon"></i> Dirección: [Tu Dirección Aquí]</p>
+                <p><i class="icon"></i> Teléfono: [Tu Número Aquí]</p>
+                <p><i class="icon"></i> Email: [Tu Email Aquí]</p>
+                <p><i class="icon"></i> Horario: [Tu Horario Aquí]</p>
             </div>
         </section>
 
-        <section id="contacto" class="py-5 bg-light">
-            <div class="container">
-                <h2 class="h3 mb-4">Contáctanos</h2>
-                <p class="lead">Visítanos en nuestra tienda o llámanos.</p>
-                <p><i class="bi bi-telephone-fill me-2"></i> Teléfono: +123 456 7890</p>
-                <p><i class="bi bi-envelope-fill me-2"></i> Email: info@ferreteria.com</p>
-            </div>
-        </section>
-
-        <section id="pedidos" class="py-5 bg-body-tertiary">
-            <div class="container">
-                <h2 class="h3 mb-4">Solicita un Producto</h2>
-                <p class="lead">¿No encuentras lo que buscas? ¡Haz tu pedido aquí!</p>
-                <form class="row g-3">
-                    <div class="col-md-6">
-                        <label for="nombre" class="form-label">Nombre:</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" required>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="email" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="col-12">
-                        <label for="producto" class="form-label">Producto:</label>
-                        <input type="text" class="form-control" id="producto" name="producto" required>
-                    </div>
-                    <div class="col-12">
-                        <label for="descripcion" class="form-label">Descripción:</label>
-                        <textarea class="form-control" id="descripcion" name="descripcion" rows="4" required></textarea>
-                    </div>
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Enviar Pedido</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-dark text-light py-3 text-center">
-        <div class="container">
-            <p class="mb-0">&copy; 2025 Ferretería. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+        <footer class="landing-footer">
+            <p>&copy; 2025 Ferretería. Todos los derechos reservados.</p>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </html>

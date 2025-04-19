@@ -1,0 +1,21 @@
+/* styles/menu.css */
+
+.landing-nav {
+    width: 100%; /* Cambiado a 100% */
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* O space-around, space-between según prefieras */
+}
+
+.landing-nav a {
+    color: #333; /* Color del texto del menú */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.landing-nav a:hover {
+    color: #c7a377; /* Color al pasar el ratón */
+}
+
+/* ... otros estilos específicos de tu menú ... */

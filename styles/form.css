@@ -1,0 +1,70 @@
+/* styles/form.css */
+
+.reservation-form {
+  max-width: 500px;
+  margin: 20px auto; /* Añadido margen superior e inferior */
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: grid;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group textarea,
+.form-group select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 1em;
+}
+
+.reservation-form button[type="submit"] {
+  padding: 15px;
+  background-color: #c7a377; /* O el color primario de tu tema */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reservation-form button[type="submit"]:hover {
+  background-color: #a8875f; /* Un tono más oscuro del primario */
+}
+
+.button.secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.button.secondary:hover {
+  background-color: #5a6268;
+}

@@ -1,0 +1,133 @@
+/* styles/page.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333; /* Texto principal más oscuro */
+    background-color: #f4f6f8; /* Fondo gris muy claro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el footer esté abajo */
+width: 80%;
+box-sizing: border-box;
+    }
+
+
+.landing-container {
+     width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+      flex-grow: 1; /*Permite que el contenido principal crezca  */
+}
+
+.landing-header {
+    background-color: #fff; /* Fondo blanco para el header */
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    max-height: 60px;
+}
+
+.landing-footer {
+    background-color: #2c3e50; /* Azul oscuro moderno para el footer */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px; /* Bordes más redondeados */
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sutil sombra */
+}
+
+.button.primary {
+    background-color: #3498db; /* Azul moderno y vibrante */
+    color: #fff;
+}
+
+.button.primary:hover {
+    background-color: #2980b9; /* Tono más oscuro al pasar el ratón */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.button.secondary {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.button.secondary:hover {
+    background-color: #e0e0e0;
+    border-color: #ccc;
+}
+
+.button.danger-small {
+    background-color: #e74c3c; /* Rojo para acciones de peligro */
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.button.danger-small:hover {
+    background-color: #c0392b;
+}
+
+.button.secondary-small {
+    background-color: #6c757d;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.button.secondary-small:hover {
+    background-color: #5a6268;
+}
+
+h2 {
+    color: #2c3e50; /* Azul oscuro para los títulos */
+    border-bottom: 2px solid #3498db; /* Línea azul debajo de los títulos */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #3498db; /* Azul para subtítulos */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+.full-width {
+    width: 80%;
+}
+
+.separator {
+    height: 50px; /* Ajusta la altura para la separación deseada */
+    width: 100%; /* Opcional: para que ocupe todo el ancho */
+}
+/* ... otros estilos generales que quieras aplicar a la página ... */
