@@ -1,6 +1,5 @@
-/* styles/responsive.css */
 
-/* Estilos para pantallas más pequeñas (móviles, hasta 767px de ancho) */
+
 @media (max-width: 767px) {
     .landing-header {
         flex-direction: column;
@@ -9,76 +8,102 @@
         padding: 15px 0;
     }
 
-    .logo {
-        margin-bottom: 10px;
-        max-height: 50px;
+    .hero-section {
+        flex-direction: column-reverse; /* Mantiene la disposición en móvil */
+        text-align: center;
+        padding: 30px 20px;
+        background-color: #F5F5DC; /* Mantiene el fondo beige en móvil */
     }
 
-    .landing-nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        margin-top: 10px;
+}
+/* Modificación para escritorio */
+@media (min-width: 768px) {
+    #hero {
+        flex-direction: column; /* Volvemos a apilar en escritorio para que el carrusel sea el fondo */
+        align-items: stretch; /* Estira para ocupar todo el alto */
+        justify-content: flex-start; /* Alinea el contenido al inicio (arriba) si lo prefieres */
+        min-height: 100vh; /* Ocupa toda la altura de la ventana en escritorio (opcional) */
     }
 
-    .landing-nav a {
-        font-size: 1em;
+    .hero-content {
+        text-align: left;
+        align-self: flex-start; /* Alinea el contenido al inicio (izquierda arriba) */
+        margin: 50px; /* Añade un margen para separarlo de los bordes */
     }
+}
+
 
     .hero-section {
-        flex-direction: column-reverse; /* Invierte el orden en móviles */
+        flex-direction: column-reverse;
         text-align: center;
         padding: 30px 20px;
     }
 
-    .hero-content {
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .hero-image {
-        width: 100%;
-    }
-
     .services-grid {
-        grid-template-columns: 1fr; /* Una columna en móviles */
+        grid-template-columns: 1fr;
+    }
+    .hero-section {
+        background-color: #F5F5DC; /* Beige - DESCOMENTAMOS ESTA LÍNEA */
+        padding: 30px 20px;
+        text-align: center;
     }
 
-    .contact-info {
-        text-align: center;
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Estilos para pantallas medianas (tablets, desde 768px hasta 991px de ancho) */
-@media (min-width: 768px) and (max-width: 991px) {
-    .hero-section {
-        padding: 40px 30px;
+@media (min-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
+}
 
+@media (max-width: 767px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr); /* Dos columnas en tablets */
     }
 }
 
-/* Estilos para pantallas grandes (desktops, desde 992px en adelante) */
 @media (min-width: 992px) {
-    .hero-section {
-        padding: 60px 40px;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .hero-content {
-        width: 50%;
-        text-align: left;
-    }
-
-    .hero-image {
-        width: 45%;
-    }
-
     .services-grid {
-        grid-template-columns: repeat(4, 1fr); /* Cuatro columnas en desktops */
+        grid-template-columns: repeat(4, 1fr); /* Cuatro columnas en escritorios */
     }
+}
+
+/* Estilos responsive para el formulario */
+@media (max-width: 767px) {
+    .reservation-form {
+        padding: 20px; /* Reduce el padding en pantallas pequeñas */
+    }
+  }
+/* Estilos responsive para el formulario ancho */
+@media (max-width: 767px) {
+    .reservation-form.wide-desktop {
+        grid-template-columns: 1fr; /* Volver a una columna en móvil */
+        padding: 20px;
+    }
+  
+    .reservation-form.wide-desktop .item-row {
+        grid-template-columns: 1fr; /* Una columna para herramienta y cantidad en móvil */
+    }
+  }
+
+/* Estilos responsive para el footer */
+@media (max-width: 767px) {
+    .footer-content {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        text-align: center;
+    }
+
 }

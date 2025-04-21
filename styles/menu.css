@@ -1,21 +1,47 @@
-/* styles/menu.css */
 
-.landing-nav {
-    width: 100%; /* Cambiado a 100% */
-    display: flex;
-    gap: 20px;
-    justify-content: center; /* O space-around, space-between según prefieras */
+
+.landing-header .navbar {
+    background-color: #8B4513; /* Marrón para el fondo del navbar */
+    padding: 10px 20px; /* Ajusta el padding vertical y horizontal según necesites */
 }
 
-.landing-nav a {
-    color: #333; /* Color del texto del menú */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+.landing-header .navbar-brand {
+    color: #fff; /* Blanco para el texto del logo (si es texto) */
+    font-weight: bold; /* Opcional: si quieres el logo en negrita */
+    margin-right: 20px; /* Espacio entre el logo y el menú */
 }
 
-.landing-nav a:hover {
-    color: #c7a377; /* Color al pasar el ratón */
+.landing-header .navbar-brand:hover {
+    color: #C7A377; /* Dorado al pasar el ratón sobre el logo (opcional) */
 }
 
-/* ... otros estilos específicos de tu menú ... */
+.landing-header .navbar-toggler {
+    border-color: #fff; /* Color del borde del botón toggler */
+}
+
+.landing-header .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* Icono del toggler en blanco */
+}
+
+.landing-header .navbar-nav .nav-link {
+    color: #fff; /* Blanco para los enlaces del menú */
+    font-weight: bold; /* Opcional: enlaces en negrita */
+    transition: color 0.3s ease; /* Transición suave para el color */
+    padding: 0.5rem 1rem; /* Ajusta el padding de los enlaces */
+}
+
+.landing-header .navbar-nav .nav-link:hover {
+    color: #C7A377; /* Dorado al pasar el ratón sobre los enlaces */
+}
+
+.landing-header h5 { /* Estilo para el texto "ferreteria" */
+    color: #fff; /* Texto blanco */
+    font-weight: bold; /* Opcional: en negrita */
+    margin-left: 15px; /* Espacio del logo */
+    margin-bottom: 0; /* Elimina el margen inferior por defecto */
+}
+
+/* Opcional: Si quieres eliminar el fondo claro por defecto de bg-light */
+.bg-light {
+    background-color: transparent !important;
+}

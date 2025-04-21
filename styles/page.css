@@ -1,133 +1,220 @@
-/* styles/page.css */
 
+/* Estilos globales */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333; /* Texto principal más oscuro */
-    background-color: #f4f6f8; /* Fondo gris muy claro */
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Asegura que el footer esté abajo */
-width: 80%;
-box-sizing: border-box;
-    }
-
-
-.landing-container {
-     width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-      flex-grow: 1; /*Permite que el contenido principal crezca  */
+    background-color: #F4F4F4; /* Fondo gris claro */
+    color: #333; /* Texto gris oscuro */
+    line-height: 1.6;
 }
 
-.landing-header {
-    background-color: #fff; /* Fondo blanco para el header */
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.logo {
-    max-height: 60px;
-}
-
-.landing-footer {
-    background-color: #2c3e50; /* Azul oscuro moderno para el footer */
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
-}
-
-.button {
-    display: inline-block;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 8px; /* Bordes más redondeados */
-    font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-    border: none;
-    cursor: pointer;
-    font-size: 1em;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sutil sombra */
-}
-
-.button.primary {
-    background-color: #3498db; /* Azul moderno y vibrante */
-    color: #fff;
-}
-
-.button.primary:hover {
-    background-color: #2980b9; /* Tono más oscuro al pasar el ratón */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-}
-
-.button.secondary {
-    background-color: #f0f0f0;
-    color: #333;
-    border: 1px solid #ddd;
-}
-
-.button.secondary:hover {
-    background-color: #e0e0e0;
-    border-color: #ccc;
-}
-
-.button.danger-small {
-    background-color: #e74c3c; /* Rojo para acciones de peligro */
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 5px;
-    font-size: 0.9em;
-}
-
-.button.danger-small:hover {
-    background-color: #c0392b;
-}
-
-.button.secondary-small {
-    background-color: #6c757d;
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 5px;
-    font-size: 0.9em;
-}
-
-.button.secondary-small:hover {
-    background-color: #5a6268;
-}
-
-h2 {
-    color: #2c3e50; /* Azul oscuro para los títulos */
-    border-bottom: 2px solid #3498db; /* Línea azul debajo de los títulos */
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-h3 {
-    color: #3498db; /* Azul para subtítulos */
-    margin-top: 20px;
-    margin-bottom: 10px;
+h1, h2, h3 {
+    margin: 0 0 15px;
+    color: #8B4513; /* Marrón */
 }
 
 p {
+    margin: 0 0 10px;
+    color: #555; /* Gris medio */
+}
+
+/* Contenedor principal */
+.landing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Botones */
+.button {
+    padding: 10px 20px;
+    background-color: #C7A377; /* Dorado */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #8B4513; /* Marrón */
+}
+
+
+
+
+
+.navbar-brand {
+    padding-top: 0; /* Elimina el padding superior del brand */
+    padding-bottom: 0; /* Elimina el padding inferior del brand */
+    margin-right: 20px; /* Espacio entre el logo y el menú */
+}
+
+.logo {
+    max-height: 60px; /* Ajusta el tamaño del logo para que coincida con la barbería */
+}
+
+.navbar-nav .nav-link {
     color: #555;
+    padding: 0.5rem 1rem; /* Ajusta el padding de los enlaces */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #3778c2; /* Color azul al pasar el ratón */
+}
+
+.navbar-toggler {
+    border: none; /* Elimina el borde del toggler */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(85, 85, 85, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* Icono del toggler más oscuro */
+}
+
+/* Elimina el fondo claro por defecto del bg-light si prefieres un fondo blanco puro */
+.bg-light {
+    background-color: transparent !important;
+}
+
+
+.full-width {
+    width: 100%;
+    height: auto;
+}
+
+
+#hero {
+    position: relative; /* Necesario para el posicionamiento absoluto del carrusel */
+    display: flex;
+    flex-direction: column; /* Mantiene la disposición vertical en móvil por defecto */
+    align-items: center;
+    justify-content: center;
+    min-height: 500px; /* Ajusta la altura mínima según necesites */
+    padding: 0;
+    overflow: hidden;
+}
+
+.hero-content h1 {
+    color: #8B4513; /* Marrón */
+}
+
+.hero-content p {
+    color: #555; /* Gris medio */
+}
+
+.hero-content .button {
+    background-color: #C7A377; /* Dorado */
+    color: #fff;
+}
+
+.hero-content .button:hover {
+    background-color: #8B4513; /* Marrón */
+}
+/* Estilos para el carrusel dentro del hero */
+#heroCarousel {
+    position: absolute; /* Cubrirá todo el #hero */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Detrás del contenido */
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-inner img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del carrusel */
+    height: 100%;
+    object-fit: cover; /* Cubre el espacio manteniendo la proporción */
+}
+
+/* Estilos para el contenido del hero */
+.hero-content {
+    position: relative; /* Para estar encima del carrusel */
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente para el texto */
+    padding: 40px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 600px;
+}
+
+
+
+#productos {
+    padding: 60px 20px;
+    background-color: #f8f8f8; /* Un fondo gris claro, similar al body */
+    text-align: center;
+}
+
+#productos h2 {
+    font-size: 2.5em;
+    color: #8B4513; /* Marrón oscuro, similar a la navegación */
+    margin-bottom: 30px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adaptativo para diferentes tamaños de pantalla */
+    gap: 30px;
+    padding: 20px;
+}
+
+.service-card {
+    background-color: #fff; /* Fondo blanco para las tarjetas, similar al fondo del formulario */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+}
+
+.service-card h3 {
+    font-size: 1.8em;
+    color: #C7A377; /* Dorado, similar al hover de la navegación */
     margin-bottom: 15px;
 }
 
-.form-group {
+.service-card p {
+    color: #555; /* Gris medio, similar al texto general */
     margin-bottom: 20px;
 }
-.full-width {
-    width: 80%;
+
+.service-list {
+    list-style: none;
+    padding: 0;
 }
 
-.separator {
-    height: 50px; /* Ajusta la altura para la separación deseada */
-    width: 100%; /* Opcional: para que ocupe todo el ancho */
+.service-list li {
+    margin-bottom: 8px;
+    color: #333; /* Gris oscuro para los ítems de la lista */
 }
-/* ... otros estilos generales que quieras aplicar a la página ... */
+
+
+.copyright {
+    grid-column: 1 / -1; /* Ocupa todo el ancho */
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #ddd;
+}
+
+
+/* Estilos para el footer simple */
+.simple-footer {
+    background-color: #333; /* Un gris oscuro como ejemplo, puedes cambiarlo a marrón si prefieres */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.simple-footer p {
+    margin: 0;
+}

@@ -1,15 +1,54 @@
-function enviarWhatsApp() {
-    const nombre = document.getElementById('nombreSolicitud').value;
-    const apellido = document.getElementById('apellidoSolicitud').value;
-    const email = document.getElementById('emailSolicitud').value;
-    const descripcion = document.getElementById('descripcionSolicitud').value;
-    const telefono = '5493513478652'; // Reemplaza con tu número
 
-    const mensaje = `Hola,%20mi%20nombre%20es:%20${encodeURIComponent(nombre)}%20${encodeURIComponent(apellido)}.%0AEmail:%20${encodeURIComponent(email)}.%0AConsulta/Pedido:%20${encodeURIComponent(descripcion)}`;
+document.addEventListener('DOMContentLoaded', function() {
+    const enviarPorWhatsappBtn = document.getElementById('enviarPorWhatsapp');
+    const formulario = document.getElementById('nuevaSolicitudForm');
 
-    const urlWhatsApp = `https://wa.me/<span class="math-inline">\{telefono\}?text\=</span>{mensaje}`;
-    window.open(urlWhatsApp, '_blank');
-}
+    enviarPorWhatsappBtn.addEventListener('click', function(event) {
+        event.preventDefault(); // Evita la navegación predeterminada del enlace
+
+        const nombre = formulario.querySelector('#nombreSolicitud').value;
+        const apellido = formulario.querySelector('#apellidoSolicitud').value;
+        const email = formulario.querySelector('#emailSolicitud').value;
+        const descripcion = formulario.querySelector('#descripcionSolicitud').value;
+
+        let mensaje = "Hola, me gustaría realizar la siguiente consulta/pedido:\n\n";
+        mensaje += "*Información Personal:*\n";
+        mensaje += `Nombre: ${nombre}\n`;
+        mensaje += `Apellido: ${apellido}\n`;
+        mensaje += `Email: ${email}\n\n`;
+
+        // Recopilar herramientas y cantidades
+        const herramientas = formulario.querySelectorAll('[name="herramienta[]"]');
+        const cantidades = formulario.querySelectorAll('[name="cantidad[]"]');
+        if (herramientas.length > 0) {
+            mensaje += "*Herramientas y Cantidades:*\n";
+            for (let i = 0; i < herramientas.length; i++) {
+                if (herramientas[i].value) {
+                    mensaje += `- ${herramientas[i].value}`;
+                    if (cantidades[i] && cantidades[i].value > 0) {
+                        mensaje += ` (Cantidad: ${cantidades[i].value})`;
+                    }
+                    mensaje += "\n";
+                }
+            }
+            mensaje += "\n";
+        }
+
+        if (descripcion) {
+            mensaje += `*Descripción Adicional:*\n${descripcion}\n`;
+        }
+
+        // Codificar el mensaje para la URL
+        const mensajeCodificado = encodeURIComponent(mensaje);
+
+        // Construir la URL de WhatsApp
+        const telefono = "5493513478652"; // Reemplaza con tu número de teléfono si es diferente
+        const urlWhatsapp = `https://wa.me/${telefono}?text=${mensajeCodificado}`;
+
+        // Redirigir al usuario a WhatsApp
+        window.open(urlWhatsapp, '_blank');
+    });
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     const nuevaSolicitudForm = document.getElementById('nuevaSolicitudForm');
